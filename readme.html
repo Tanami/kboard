@@ -1,0 +1,567 @@
+<html>
+<head>
+<title>無題ドキュメント</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<p><font size="4"><b><font size="5">KBOARD SHIRO'S VERSION<br>
+  </font><font size="4"><b><font size="5">VER.1.9 (Maｙ 26, 2002)</font></b></font></b></font></p>
+<p><font size="4"><b><br>
+  シロ　（大山四朗）</b></font> <br>
+  EMAIL: <a href="mailto:s-o-yama@fa2.so-net.ne.jp">s-o-yama@fa2.so-net.ne.jp</a><br>
+  HP : <a href="http://www.kyoshin-sj.co.jp/oyama/">http://www.kyoshin-sj.co.jp/oyama/<br>
+  </a><br>
+  <br>
+  この度は、KBOARD SHIRO'S VERSION をダウンロードして頂き有難うございます｡ 基本的な説明・重要事項に関しましては、同梱してあります 
+  k-board 原作者の information.htm をお読みください｡<br>
+  <br>
+  初めてこの掲示板をお使いになる方、あるいは cgi の設定がはじめての方は、下記の流れにそって設定してください。　慣れている方は下記リンクから必要なところに飛んでください。</p>
+<p><font size="4"><a name="top"></a><a href="#function">機能・特徴<br>
+  </a></font><a href="#install"><font size="4">インストール</font></a><font size="4"><br>
+  <a href="#upload">アップロード</a><br>
+  <a href="#permission">パーミッション</a>　<br>
+  <font size="4"><a href="#error">各種エラーと対処方法</a></font> <br>
+  <a href="#caution">各種注意事項</a><br>
+  <a href="#distribution">再配布上の注意</a><br>
+  <a href="#history">履歴</a><br>
+  </font></p>
+<p><font size="4"><b><a name="function"></a>機能・特徴</b></font></p>
+<p>特徴は下記のとおりです。 <br>
+  <br>
+  1) 書き込み回数が増えるにつれ家が大きくなる。 <br>
+  <br>
+  2) 置手紙ができる。(私書箱機能) <br>
+  <br>
+  3) マルチレスタイプ。（コメントに対し沢山の方がレスをつけられる｡）<br>
+  <br>
+  4) 屋根色が変更可能<br>
+  <br>
+  5) 他のバージョンではある肩書きを過ぎるとまた家の形が小さくなり悲しい思いをしますが、SHIRO'S VERSION では小さくならない｡ <br>
+  <br>
+  6) 掲示板のタイトルに文字と画像のどちらでも使える。<br>
+  <br>
+  7) 自由アイコンを追加(アイコン使用時）。<br>
+  <br>
+  8) グラフォンを追加(タグの使用を許可時)。<br>
+  <br>
+  9) 三種類のカウンター付き｡ <br>
+  <br>
+  10) 町の空、背景、区切り線が時刻により変化｡ （早朝、昼間、夕方、夜）<br>
+  <br>
+  11) 背景画像表示の固定も選択可能。<br>
+  <br>
+  12) レスが付くとその親記事を先頭に表示。<br>
+  <br>
+  13) 顔文字アニメ使用可能(タグの使用を許可時)。<br>
+  <br>
+  14) 専用アイコンを自動登録(アイコン使用時)｡ 登録したアイコンはアイコンの選択窓に表示されます｡ <br>
+  <br>
+  15) 親記事・レス記事ともに内容とアイコンを編集可能。<br>
+  <br>
+  16) Send mail 機能を使用する際に、管理人が書き込んだときはメール通知しない。 <br>
+  <br>
+  17) お気に入りのアイコンを設定可能。<br>
+  <br>
+  18) 入室制限機能（会員制機能）も設定可能。<br>
+  <br>
+  19) ＢＧＭ機能。<br>
+  <br>
+  ☆ 付録 ☆ スクロールバーの色や背景の色を設定するのに便利なカラーサンプルとカラーコードの表を付けました。</p>
+<p><font size="4"><br>
+  <b><a name="install"></a>インストールへの大まかな流れ</b></font></p>
+<p align="right"><b><font size="4"><a name="top"></a><a href="#top">TOPへ</a></font></b> 
+</p>
+<p>1) このファイルをご覧になっているということは、解凍は終わっているわけですが、解凍ソフトのオプションで「書庫のフォルダーを復元する」というような設定をしてから解凍すると、フォルダー構成が崩れません。　もし、そういう解凍の仕方をしていない場合は、もう一度解凍しなおして下さい。<br>
+  <br>
+  尚、NIFTY は独自のサイト構成になっていますので、解凍されたフォルダー構成とは異なります。NIFTY にファイルをアップする場所をご確認ください｡ 
+  <br>
+  <br>
+  2) 一度に設定を全て変更してしまうと、動かないときに何が問題なのかが分かりにくくなります。　従って、面倒でも一つずつ直してはアップロードし、動作を確認するということを繰り返して下さい。　また何かを書き換える場合は、前後にある 
+  , ; &quot; などの記号を間違って消さないようにして下さい。<br>
+  <br>
+  3) 最初に<b> kboard.cgi</b> の下記の設定だけを変更します。<br>
+  <br>
+  * １行目　#!/usr/bin/perl　の perl のパスは書き換えてください。　不明であれば、プロバイダーに問い合わせてください。<br>
+  <br>
+  * $masterkey = &quot;0123&quot;; の 0123 の所を自分のパスワードに変更して下さい。<br>
+  <br>
+  4) 次に<b> kboard.ini</b> の下記の設定を変更します。<br>
+  フォルダー（ディレクトリー）構成は変わっていないことを前提にしています。<br>
+  <br>
+  * $town_title = &quot;SHIRO'S TOWN&quot;; #街の名前　の SHIRO'S TOWN を　自分の好きな名前に変更してください。<br>
+  <br>
+  5) 専用アイコンを登録するための cgi を設定します。<br>
+  <br>
+  * １行目　#!/usr/bin/perl　の perl のパスは書き換えてください。　不明であれば、プロバイダーに問い合わせてください。<br>
+  <br>
+  * <b>pup.cgi</b> の下記の部分の名前、メールアドレス、パスワードを変更してください。<br>
+  <br>
+  $AdminName = '管理人'; #あなたのおなまえ<br>
+  $AdminMail = 'xxx@xxxx'; #あなたのメールアドレス<br>
+  $addminpass = &quot;0123&quot;; #--管理者パスワード(必ず変更してください)<br>
+  <br>
+  6) カウンター　(imgcounter の <b>dream.cgi</b>) の設定<br>
+  <br>
+  設定を変更せず、画像タイプを使うものとします。　この場合、scounter 及び flycounter のディレクトリーとその中のファイルはアップロードする必要はありません。<br>
+  <br>
+  * １行目　#!/usr/bin/perl　の perl のパスは書き換えてください。　不明であれば、プロバイダーに問い合わせてください。<br>
+  <br>
+  これでとりあえずの設定は終了です。</p>
+<p><font size="5"><b><a name="upload"></a>アップロード</b></font></p>
+<p align="right"><b><font size="4"><a name="top"></a><a href="#top">TOPへ</a></font></b> 
+</p>
+<p><font color="#cc0033">＜注意＞</font><br>
+  アップロードするときには、転送モードに注意してください。<br>
+  <font color="#FF0000">gif フォルダ内のファイル：　バイナリーモード<br>
+  それ 以外はすべて：　アスキーモード</font><br>
+  <br>
+  <br>
+  アップロードする時はFTP ソフトで下記のパーミッションを設定してアップロードしてください｡　FTP ソフトをお持ちで無い方は下記のようなサイトでフリーソフトを入手できます｡ 
+  <br>
+  http://software.wakusei.ne.jp/free/ (ffftpなどが定番ソフトとして有名です。）<br>
+  <br>
+  <a name="permission"></a>パーミッションの指定が必要なファイル・ディレクトリーは下記の通りです｡</p>
+<p align="right"><b><font size="4"><a name="top"></a><a href="#top">TOPへ</a></font></b> 
+</p>
+<table width="649" border="1" cellspacing="3" cellpadding="3">
+  <tr bgcolor="#CCFFFF"> 
+    <td width="116">機能</td>
+    <td width="127">ファイル名</td>
+    <td width="81">パーミッション</td>
+    <td width="276">備考</td>
+  </tr>
+  <tr> 
+    <td width="116">KBOARD SHIRO'S VERSION 本体関係</td>
+    <td width="127">kboard.cgi</td>
+    <td width="81">755</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">kboard.ini</td>
+    <td width="81">644</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">kboard.log</td>
+    <td width="81">666</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">rank.dat</td>
+    <td width="81">666</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">res.log</td>
+    <td width="81">666</td>
+    <td width="276">私書箱使用の場合必要</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">pcnt.dat</td>
+    <td width="81">666</td>
+    <td width="276">過去ログを使用の場合必要 (*<a href="#caution1">注意１</a>)</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">jcode.pl</td>
+    <td width="81">755</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">kboard フォルダー</td>
+    <td width="81">755 or 777</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">kboard_p フォルダー</td>
+    <td width="81">777</td>
+    <td width="276">過去ログ使用の場合必要 (忘れる人が多い)</td>
+  </tr>
+  <tr>
+    <td width="116">　</td>
+    <td width="127">music フォルダー</td>
+    <td width="81">555</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">音楽ファイル</td>
+    <td width="81">444</td>
+    <td width="276">(*<a href="#caution3">注意３</a>)</td>
+  </tr>
+  <tr> 
+    <td width="116">グラフォン</td>
+    <td width="127">gf.cgi</td>
+    <td width="81">755</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">シンプルカウンター</td>
+    <td width="127">scounter フォルダー</td>
+    <td width="81">755</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">count.cgi</td>
+    <td width="81">705</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116" height="20">　</td>
+    <td width="127" height="20">count.log</td>
+    <td width="81" height="20">606</td>
+    <td width="276" height="20">　</td>
+  </tr>
+  <tr> 
+    <td width="116">GIF画像カウンター</td>
+    <td width="127">imgcounter フォルダー</td>
+    <td width="81">777</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">dream.cgi</td>
+    <td width="81">755</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">gifcat.pl</td>
+    <td width="81">644</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">index.dat</td>
+    <td width="81">666</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">gif1 フォルダー</td>
+    <td width="81">755</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">0.gif ～ 9.gif</td>
+    <td width="81">604</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">重ね画像カウンター</td>
+    <td width="127">flycounter フォルダー</td>
+    <td width="81">755</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">fly</td>
+    <td width="81">705</td>
+    <td width="276">(*<a href="#caution2">注意２</a>)</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">count.cgi</td>
+    <td width="81">705</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">count.log</td>
+    <td width="81">606</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">0.gif ～ 9.gif</td>
+    <td width="81">604</td>
+    <td width="276">画像変更時注意 (*<a href="#caution2">注意2</a>)</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">bad.gif</td>
+    <td width="81">604</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">backpic.gif</td>
+    <td width="81">604</td>
+    <td width="276">画像変更時注意 (*<a href="#caution2">注意2</a>)</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">tmp フォルダー</td>
+    <td width="81">707</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">専用アイコン登録</td>
+    <td width="127">pup.cgi</td>
+    <td width="81">755</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">iconfile.log</td>
+    <td width="81">666</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">pup_lock</td>
+    <td width="81">644</td>
+    <td width="276">　</td>
+  </tr>
+  <tr> 
+    <td width="116">　</td>
+    <td width="127">icon フォルダー</td>
+    <td width="81">777</td>
+    <td width="276">　</td>
+  </tr>
+</table>
+<p><br>
+  アップロードしたら、動作確認をします。<br>
+  動作が確認できたら、kboard.ini などの各種設定ファイルの細かい設定を一つずつ変更していきます。　一度に全て変更することはしないで下さい。　動かなくなったときにどれが原因かわからなくなります。</p>
+<p align="left"><b><font size="4"><a name="error"></a>各種エラーと対処方法</font></b></p>
+<p align="right"> <b><font size="4"><a name="top"></a><a href="#top">TOPへ</a></font></b> 
+</p>
+<p align="left">上の手順で動き出したはずですが、人間ですから、自分ではちゃんとやったはずなのに動かないと言うことが起きてしまいます。そして大体遭遇するのが「サーバーエラー」というなんだかよく分からないエラーです。これは状況によって異なりますので全部説明することはできませんが、代表的なものを参考までに載せておきますので、万が一エラーが起きた時は一応チェックしてみて下さい。<br>
+</p>
+<table width="734" border="1" cellspacing="3" cellpadding="3">
+  <tr bgcolor="#CCFFFF"> 
+    <td width="222" valign="top">エラー内容</td>
+    <td width="485">原因と対処方法</td>
+  </tr>
+  <tr> 
+    <td rowspan="9" valign="top">検索中のページには問題があるので表示できません。<br>
+      (HTTP 500 - INTERNAL SERVER ERROR などさまざま)</td>
+    <td width="485">プロバイダーが cgi の使用を許可していない。</td>
+  </tr>
+  <tr> 
+    <td width="485">kboard.cgi や ppkboard.cgi １行目の perl のパス指定が間違っている。<br>
+      もう一度プロバイダーに確認し、パス指定を直す。 </td>
+  </tr>
+  <tr> 
+    <td width="485">kboard.cgi や ppkboard.cgi で jcode.pl の相対パスの指定が間違っている。<br>
+      jcode.pl が間違いなくアップロードされていることを確認し、パスを直す。</td>
+  </tr>
+  <tr> 
+    <td width="485">パーミッションの指定が間違っている。もう一度<a href="#permission">パーミッションの表</a>に従って訂正する。</td>
+  </tr>
+  <tr> 
+    <td width="485">cgi 格納ディレクトリー以外の場所に cgi ファイルがある。<br>
+      （プロバイダーによっては特別な場所に入れないといけない。） </td>
+  </tr>
+  <tr> 
+    <td width="485">kboard.ini や ppkboard.ini の中のカスタマイズで、必要な文字を間違って消している。<br>
+      あるいは不必要な文字を入れている。 </td>
+  </tr>
+  <tr> 
+    <td width="485">データファイル、テキストファイルがアップロードされていない。<br>
+      データファイル、テキストファイルが間違った場所にアップロードされている。 </td>
+  </tr>
+  <tr> 
+    <td width="485">sendmail 機能がプロバイダーにより許可されていないのに、使用している。</td>
+  </tr>
+  <tr> 
+    <td width="485">ファイルをアップロードする際の転送モードが間違っている。<a href="#upload">アップロード</a>参照。</td>
+  </tr>
+  <tr> 
+    <td width="222" valign="top">画像が表示されない。<br>
+    </td>
+    <td width="485">画像データの設置場所が間違っている。<br>
+      kboard.ini の画像用ディレクトリーを変更したのであれば、その場所に画像をアップロードする。</td>
+  </tr>
+  <tr> 
+    <td width="222" valign="top">画像が表示されるが、乱れている。 </td>
+    <td width="485">画像の転送モードが間違っている。<a href="#upload">アップロード</a>参照。</td>
+  </tr>
+  <tr> 
+    <td width="222" valign="top">アクセス権限がありません。</td>
+    <td width="485">cgi ファイルを設定したアドレスが間違っていないか確認。</td>
+  </tr>
+  <tr> 
+    <td width="222" valign="top">sendmail 設定したのに、メールが送信されない。</td>
+    <td width="485">sendmail 機能が許可されていない。<br>
+      sendmail のパスが間違っている。<br>
+      メールアドレスが間違っている。 </td>
+  </tr>
+  <tr> 
+    <td width="222" valign="top">今まで書き込みできていたのに、突然書き込みができなくなった。</td>
+    <td width="485">kboard.ini や ppkboard.ini で過去ログを使用するという設定にしたにもかかわらず、その過去ログを保存するディレクトリーや必要な設定をしていない。<br>
+      <a href="#permission">パーミッションの表</a>の中の注意書き（備考）を参照。</td>
+  </tr>
+  <tr> 
+    <td width="222" valign="top">顔文字アニメが使えない。</td>
+    <td width="485">顔文字アニメの画像ファイルの場所が間違っている。</td>
+  </tr>
+  <tr> 
+    <td width="222" valign="top">専用アイコンの登録ができない。</td>
+    <td width="485">アイコンフォルダーのパーミッションが 777 になっていない。</td>
+  </tr>
+</table>
+<p align="left">　 </p>
+<p><b><font size="4"><a name="caution"></a>各種注意事項</font></b></p>
+<p align="right"><b><font size="4"><a name="top"></a><a href="#top">TOPへ</a></font></b> 
+</p>
+<p> ★　注意　★ FLYは WEB サイトの規制で使えないところもあります。そのために、シンプルタイプと GIF画像タイプもそろえました。使えるカウンターのみアップすれば構いません。尚、その場合に 
+  kboard.ini のカウンターの設定を間違えないようにしてください。 <br>
+  <br>
+  <a name="caution1"></a>注意１: <br>
+  過去ログを使用する設定にすると、書き込みが多い所ではすぐに過去のログで一杯になります｡　ホームページで借りている容量に制限がある場合は使用しないほうが良いでしょう｡ 
+  <br>
+  <br>
+  <a name="caution2"></a>注意2：<br>
+  FLYは WEB サイトの規制で使えないところもあります。　fly は画像の上に画像を表示するためのもので、ご自分の web サイトのサーバーの OS 
+  にあったものを使用する必要があります｡ 例えば、LINUX、FREE BSD、BSDI、SunOS、SOLARIS 等｡従ってサーバーの管理者にお問い合わせの上、下記のサイトから適切なものをダウンロードしてください｡（添付されている 
+  fly は LINUX 用です。)<br>
+  http://p4room.or.jp/fly/ja/<br>
+  <br>
+  もしどうしてもうまく行かない場合は、カウンターを使用しない設定にしてください。 （できれば、最初は使用しない設定にして全ての動作確認後、カウンターの設定を行ってください。）<br>
+  <br>
+  画像は変更可能ですが、下記の点にご注意ください｡<br>
+  <br>
+  1) 背景に使用する画像(現時点では白黒のタウン)は背景を透明処理しないで下さい｡その代わり、透明にすべきところを黒色にして下さい｡（これは変更可能ですが、cgi 
+  の中の RGB 設定も変更する必要が出てきます｡） <br>
+  2) 数字の画像は背景を透明処理してください｡(色は問いませんので、透明処理だけしてください。） <br>
+  3) 背景の画像も数字の画像も横･縦のピクセル数を調べて、CGI のスクリプトの中の数字を入れ替えてください｡ <br>
+  4) 表示される位置(X,Y)は表示を見ながら変更してください｡<br>
+  <br>
+  <a name="caution3"></a>注意3:<br>
+  音楽ファイルは著作権の関係で同梱されていません。<br>
+  ご自分でフリーのファイルを探すか作曲してください。 <br>
+  そのファイルを music ディレクトリーに入れてください。<br>
+  <br>
+  注意4:<br>
+  他の方が作成されているバージョンから乗り換えられる場合は、ログの配列が違いますので、そのままのログでは使用できません。<br>
+  ご参考までに、配列は下記のようになっています。 <br>
+  <br>
+  1) rank.dat の配列（これは同じ？） 私のバージョンでは下記のようにデータは配列されています｡<br>
+  シロ<>29<>2<>www.kyoshin-sj.co.jp/oyama/<>989456304<>purple<>12345678<br>
+  これは下記の意味です｡<br>
+  名前<>10の位のカウント<>100の位のカウント<>URL<>時間<>屋根色<>パスワード<br>
+  <br>
+  2) kboard.log の配列 <br>
+  381<>シロ<>s-o-yama＠fa2.so-net.ne.jp<>www.kyoshin-sj.co.jp/oyama/<>タイトルの画像<>タイトルに画像を使えるように 
+  CGI を書き換えました｡<><>2001/05/11(Fri) 12:02:49<>989550169<>210.160.141.146<>123456789<>rniko.gif<>000000<br>
+  これは下記の意味です｡<br>
+  記事番号<>名前<>Email<>URL<>タイトル<>こめんと<>レス番号<>日付<>時間<>host<>パスワード<>アイコン<>文字色</p>
+<p><b><font size="5" color="#FF0000"><a name="distribution"></a>再配布上の注意</font></b></p>
+<p align="right"><b><font size="4"><a name="top"></a><a href="#top">TOPへ</a></font></b> 
+</p>
+<p>KBOARD SHIRO'S VERSION を改変して再配布される場合は、以下のことを守ってください｡これをお守り頂けない方は再配布を禁じます｡<br>
+  <br>
+  1. 画面下のコピーライト部を書き換えないこと｡ 理由は私の責任において改変したものであり、原作者や他のバージョンの作者にご迷惑をかけないために、そして私の著作権を明確にするためです｡<br>
+  <br>
+  2. 表示位置を変えたり、絵を入れたりという程度の変更であれば、できれば再配布という形は取らずに、上記のコピーライト部のリンクから私のホームページに来てもらうようにお願いします｡　これは上記の著作権以外にバグ情報を早くお届けするためにもお願いします｡<br>
+  <br>
+  3. この readme.html を含むドキュメントはそのまま変更せず、全て添付して再配布してください｡もしご自分の何か追記事項があれば、別途ドキュメントをご用意ください｡<br>
+  <br>
+  4. もちろん自分独自の機能をつけたり、全然考え方が違うソリューションを取られた場合は当然のことながら、独自のバージョン名をつけて配布してください｡その時点からはご自分の責任でユーザーサポートをお願いいたします｡ 
+</p>
+<p><b><font size="4"><a name="history"></a>履歴 </font></b></p>
+<p align="right"><b><font size="4"><a name="top"></a><a href="#top">TOPへ</a></font></b> 
+</p>
+<table width="400" border="0" cellspacing="3" cellpadding="3">
+  <tr>
+    <td width="72">Ｖｅｒ.1.9</td>
+    <td width="307">ＢＧＭ機能を追加。</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.8</td>
+    <td width="307">置手紙でも send mail 機能が使えるように変更。</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.7a,b,c</td>
+    <td width="307">過去ログ関係のバグフィックス</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.7</td>
+    <td width="307">入室制限機能（会員制機能）追加。</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.6</td>
+    <td width="307">お気に入りのアイコンを指定できるように変更。</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.5</td>
+    <td width="307">背景画像表示の固定も選択可能に変更。</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.4</td>
+    <td width="307">send mail 機能を更に改良<br>
+      必須項目に自動的に<font color="#FF0000">＊</font>印をつけるように変更。 </td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.3</td>
+    <td width="307">send mail 機能を改良</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.2b</td>
+    <td width="307">バグフィックス</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.2a</td>
+    <td width="307">バグフィックス</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.2</td>
+    <td width="307">空・背景等の変更時刻を指定できるように変更。</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.1a</td>
+    <td width="307">スクリプトが汚くなってきたので少し整理。</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.10</td>
+    <td width="307">編集機能追加。<br>
+      背景変更で早朝を追加。 </td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.08</td>
+    <td width="307">タウンの道の色を変更可能にした。</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.07a</td>
+    <td width="307">自由アイコンのクッキーの引渡しに関するバグフィックス。</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.07</td>
+    <td width="307">アイコン登録追加｡ 登録されたアイコンも表示されるアイコン参照追加｡ 顔文字アニメ追加｡ </td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.06</td>
+    <td width="307">カウンターを選択可能にした｡ 時刻により、背景･区切り線も変化｡</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.05d</td>
+    <td width="307">1.05のバグフィックス</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.05</td>
+    <td width="307">カウンター追加｡ 時刻で画像が変化する街の空追加｡ レスが付いたらその親記事を先頭表示。</td>
+  </tr>
+  <tr> 
+    <td width="72">Ver.1.04</td>
+    <td width="307">自由アイコンを追加。 グラフォンを追加。 スクロールバーの色を変更できるようにスクリプトを追加。</td>
+  </tr>
+  <tr> 
+    <td width="72">V.1.03a</td>
+    <td width="307">置き手紙の不具合を修正。 タイトル強制時にレスでタイトルエラーがでる不具合修正。 </td>
+  </tr>
+</table>
+<br>
+<p>　</p>
+</body>
+</html>
